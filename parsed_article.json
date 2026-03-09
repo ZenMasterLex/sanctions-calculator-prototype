@@ -1,0 +1,73 @@
+{
+  "name": "Art.217",
+  "subArticles": [
+    {
+      "label": "Stav 1",
+      "baseRange": {
+        "min": 1,
+        "max": 10
+      },
+      "factorMatrix": {
+        "classification": {
+          "Osnovni": 0.07,
+          "Srednji": 0.07,
+          "Visoki": 0.07
+        },
+        "guilt": {
+          "Direktni umišljaj": 0.07,
+          "Indirektni umišljaj": 0.07,
+          "Svjesni nehat": 0.07,
+          "Nesvjesni nehat": 0.07
+        },
+        "consequence": {
+          "Povreda": 0.07,
+          "Ugrozavanje": 0.07,
+          "Izuzetno": 0.05,
+          "Srednje": 0.05,
+          "Nisko": 0.07
+        },
+        "execution": {
+          "Osnovni": 0.05,
+          "Kvalifikacioni": 0.05,
+          "Sticaj": 0.05,
+          "Produzeno djelo": 0.05
+        },
+        "baseMultiplier": 1
+      }
+    },
+    {
+      "label": "Stav 2",
+      "baseRange": {
+        "min": 0.5,
+        "max": 5
+      },
+      "factorMatrix": {
+        "classification": {
+          "Osnovni": 0.07,
+          "Srednji": 0.07,
+          "Visoki": 0.07
+        },
+        "guilt": {
+          "Direktni umišljaj": 0.07,
+          "Indirektni umišljaj": 0.07,
+          "Svjesni nehat": 0.07,
+          "Nesvjesni nehat": 0.07
+        },
+        "consequence": {
+          "Povreda": 0.07,
+          "Ugrozavanje": 0.07,
+          "Izuzetno": 0.05,
+          "Srednje": 0.05,
+          "Nisko": 0.07
+        },
+        "execution": {
+          "Osnovni": 0.05,
+          "Kvalifikacioni": 0.05,
+          "Sticaj": 0.05,
+          "Produzeno djelo": 0.05
+        },
+        "baseMultiplier": 1
+      }
+    }
+  ]
+}

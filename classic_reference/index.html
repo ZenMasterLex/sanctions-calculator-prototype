@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanction Calculator | Professional Legal Prototype</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <h1>Sanction Calculator</h1>
+        <p class="subtitle">Precision Penalty Computation • Prototype V2</p>
+      </header>
+      
+      <main class="main-content">
+        <div class="card form-card">
+          <h2><span>⚖️</span> Case Configuration</h2>
+          <p class="section-desc">Define the legal framework and aggravating/mitigating factors.</p>
+          
+          <form id="calculator-form" class="calculator-form">
+            
+            <!-- Group 1: Framework -->
+            <div class="form-group full-width">
+              <label for="offense">Criminal Offense</label>
+              <div class="select-wrapper">
+                <select id="offense" name="offense" disabled>
+                  <option value="">Establishing connection...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sub-article">Legal Subdivision (Stav)</label>
+              <div class="select-wrapper">
+                <select id="sub-article" name="sub-article" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="classification">VSTV Hierarchy</label>
+              <div class="select-wrapper">
+                <select id="classification" name="classification" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sanction-type">Applied Sanction Type</label>
+              <div class="select-wrapper">
+                <select id="sanction-type" name="sanction-type" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guilt-degree">Degree of Culpability</label>
+              <div class="select-wrapper">
+                <select id="guilt-degree" name="guilt-degree" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="consequence-gravity">Gravity of Harm</label>
+              <div class="select-wrapper">
+                <select id="consequence-gravity" name="consequence-gravity" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="execution-type">Execution Context</label>
+              <div class="select-wrapper">
+                <select id="execution-type" name="execution-type" disabled>
+                  <option value="">Awaiting parameters...</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="button" class="btn-primary" id="calculate-btn" disabled>
+              <span>Compute Sanction</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Impactful Result Panel -->
+        <div class="card result-card" id="result-panel" style="display:none;">
+          <div class="result-header">
+            <h2>Calculated Sanction</h2>
+            <div class="result-value-container">
+              <span class="result-years" id="result-years">—</span>
+              <span class="result-unit">Years</span>
+            </div>
+            <p class="result-range" id="result-range"></p>
+          </div>
+
+          <div id="result-breakdown">
+            <!-- Table populated by JS -->
+          </div>
+
+          <div class="proof-section">
+            <div class="proof-header">
+              <span>Verified Trace Proof</span>
+              <span class="badge">SECURE</span>
+            </div>
+            <div id="proof-grid" class="proof-grid">
+              <!-- Grid items populated by JS -->
+            </div>
+            
+            <details class="steps-details">
+              <summary>Show Audit Trail (Internal Steps)</summary>
+              <ol id="result-steps" class="steps-list"></ol>
+            </details>
+          </div>
+        </div>
+
+        <!-- Error Panel -->
+        <div class="card error-card" id="error-panel" style="display:none;">
+          <h2>⚠️ Computation Interrupted</h2>
+          <p id="error-message" class="error-message"></p>
+        </div>
+
+        <div class="data-drawer">
+          <div class="drawer-header">
+            <span class="badge" id="data-status">Pending</span>
+          </div>
+          <div class="drawer-content">
+            <button id="view-data-btn" class="btn-secondary">Log Normalized Model to Console</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
