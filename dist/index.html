@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanction Computation Engine | Dual Mode</title>
+    
+    <!-- Theme Stylesheets (Toggled via JS) -->
+    <link id="theme-classic" rel="stylesheet" href="/assets/classic-Wu9wmH4H.css" disabled />
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Classic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-MGUV-chr.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DATYWmtL.css">
+  </head>
+  <body class="theme-premium">
+    
+    <!-- Theme Toggle Fixed Header -->
+    <div class="global-theme-toggle">
+      <div class="toggle-group">
+        <button id="toggle-classic" class="toggle-btn">Classic Layer</button>
+        <button id="toggle-premium" class="toggle-btn active">Executive Layer</button>
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- CLASSIC UI PRESENTATION                        -->
+    <!-- ============================================== -->
+    <div id="ui-classic" class="ui-classic" style="display: none;">
+      <div class="app-container">
+        <header class="app-header">
+          <h1>Sanction Calculator</h1>
+          <p class="subtitle">Precision Penalty Computation • Prototype V2</p>
+        </header>
+        
+        <main class="main-content">
+          <div class="card form-card">
+            <h2><span>⚖️</span> Case Configuration</h2>
+            <p class="section-desc">Define the legal framework and aggravating/mitigating factors.</p>
+            
+            <form class="calculator-form">
+              <div class="form-group full-width">
+                <label>Criminal Offense</label>
+                <div class="select-wrapper">
+                  <select id="offense-classic" disabled>
+                    <option value="">Establishing connection...</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Legal Subdivision (Stav)</label>
+                <div class="select-wrapper">
+                  <select id="sub-article-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>VSTV Hierarchy</label>
+                <div class="select-wrapper">
+                  <select id="classification-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Applied Sanction Type</label>
+                <div class="select-wrapper">
+                  <select id="sanction-type-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Degree of Culpability</label>
+                <div class="select-wrapper">
+                  <select id="guilt-degree-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Gravity of Harm</label>
+                <div class="select-wrapper">
+                  <select id="consequence-gravity-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Execution Context</label>
+                <div class="select-wrapper">
+                  <select id="execution-type-classic" disabled><option value=""></option></select>
+                </div>
+              </div>
+              
+              <button type="button" class="btn-primary" id="calculate-btn-classic" disabled>
+                <span>Compute Sanction</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="card result-card" id="result-panel-classic" style="display:none;">
+            <div class="result-header">
+              <h2>Calculated Sanction</h2>
+              <div class="result-value-container">
+                <span class="result-years" id="result-years-classic">—</span>
+                <span class="result-unit">Years</span>
+              </div>
+              <p class="result-range" id="result-range-classic"></p>
+            </div>
+
+            <div id="result-breakdown-classic"></div>
+
+            <div class="proof-section">
+              <div class="proof-header">
+                <span>Verified Trace Proof</span>
+                <span class="badge">SECURE</span>
+              </div>
+              <div id="proof-grid-classic" class="proof-grid"></div>
+              
+              <details class="steps-details">
+                <summary>Show Audit Trail (Internal Steps)</summary>
+                <ol id="result-steps-classic" class="steps-list"></ol>
+              </details>
+            </div>
+          </div>
+
+          <div class="card error-card" id="error-panel-classic" style="display:none;">
+            <h2>⚠️ Computation Interrupted</h2>
+            <p id="error-message-classic" class="error-message"></p>
+          </div>
+
+          <div class="data-drawer">
+            <div class="drawer-header"><span class="badge" id="data-status-classic">Pending</span></div>
+            <div class="drawer-content">
+              <button id="view-data-btn-classic" class="btn-secondary">Log Normalized Model to Console</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PREMIUM UI PRESENTATION                        -->
+    <!-- ============================================== -->
+    <div id="ui-premium" class="ui-premium">
+      <div class="container">
+        <header class="dashboard-header">
+          <h1>Sanction Computation Engine</h1>
+          <p class="subtitle">Article 217 • Adjudication Analysis Prototype</p>
+        </header>
+        
+        <main class="dashboard-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Case Configuration</h2>
+              <p class="panel-desc">Define formal legal parameters and culpability factors.</p>
+            </div>
+            
+            <form class="form-layout">
+              <div class="form-item full">
+                <label>Criminal Offense</label>
+                <select id="offense-premium" disabled><option value="">Connecting specific article data...</option></select>
+              </div>
+
+              <div class="form-item">
+                <label>Legal Subdivision (Stav)</label>
+                <select id="sub-article-premium" disabled><option value="">Awaiting...</option></select>
+              </div>
+
+              <div class="form-item">
+                <label>VSTV Hierarchy</label>
+                <select id="classification-premium" disabled><option value="">Awaiting...</option></select>
+              </div>
+
+              <div class="form-item">
+                <label>Degree of Culpability</label>
+                <select id="guilt-degree-premium" disabled><option value="">Awaiting...</option></select>
+              </div>
+
+              <div class="form-item">
+                <label>Gravity of Harm</label>
+                <select id="consequence-gravity-premium" disabled><option value="">Awaiting...</option></select>
+              </div>
+
+              <div class="form-item full">
+                <label>Execution Context</label>
+                <select id="execution-type-premium" disabled><option value="">Awaiting...</option></select>
+              </div>
+
+              <select id="sanction-type-premium" style="display:none;"></select>
+              
+              <button type="button" class="btn-submit" id="calculate-btn-premium" disabled>
+                Compute Final Adjudication
+              </button>
+            </form>
+          </section>
+
+          <section class="panel result-panel" id="result-panel-premium" style="display:none;">
+            <div class="result-summary">
+              <span class="result-heading">Calculated Sanction</span>
+              <div class="result-value-box">
+                <span class="result-number" id="result-number-premium">0.00</span>
+                <span class="result-label">Years</span>
+              </div>
+              <p class="result-range-info" id="result-range-premium"></p>
+            </div>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Calculation Dimension</th>
+                  <th>Resolved Choice</th>
+                  <th class="td-value">Magnitude</th>
+                  <th class="td-shift">Result Shift</th>
+                </tr>
+              </thead>
+              <tbody id="result-breakdown-body-premium"></tbody>
+            </table>
+
+            <div class="verification-section">
+              <div class="verification-header">
+                <span>Analytical Verification proof</span>
+                <span class="verif-status">MATCH_VERIFIED</span>
+              </div>
+              <div class="verif-grid">
+                <div class="verif-box">
+                  <div class="verif-label">Source identifier</div>
+                  <div class="verif-value" id="verif-article-premium">—</div>
+                </div>
+                <div class="verif-box">
+                  <div class="verif-label">Base Max Range</div>
+                  <div class="verif-value" id="verif-max-premium">—</div>
+                </div>
+                <div class="verif-box">
+                  <div class="verif-label">Resolved Scaling</div>
+                  <div class="verif-value" id="verif-scaling-premium">—</div>
+                </div>
+              </div>
+              
+              <details class="audit-details">
+                <summary>View Adjudication Audit Trail (Internal Computation)</summary>
+                <ol id="result-steps-premium" class="audit-list"></ol>
+              </details>
+            </div>
+          </section>
+
+          <section class="panel error-panel" id="error-panel-premium" style="display:none;">
+            <h2 class="error-title">Computation Fault Detected</h2>
+            <p class="panel-desc">Internal constraints prevented the final adjudication from resolving.</p>
+            <div style="margin-top: 1.5rem;">
+              <p class="error-code" id="error-message-premium"></p>
+            </div>
+          </section>
+
+          <footer class="system-footer">
+            <div class="status-indicator">
+              <div class="status-dot"></div>
+              <span id="data-status-premium">Engine Online</span>
+            </div>
+            <button id="view-data-btn-premium" class="btn-log">Access Source Model</button>
+          </footer>
+        </main>
+      </div>
+    </div>
+    
+  </body>
+</html>

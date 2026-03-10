@@ -1,0 +1,45 @@
+Criminal Offence,"
+
+Type of the Sanction","
+
+Sanction stipulated by the law","
+
+HJPC Qaulification of the level of OCC case - ALIGNED WITH THE Guidelines","
+
+Gradus of guilt","
+
+Gravity of consequence","
+
+Type of criminal act commision"," 
+Automatically calculated sentence","
+Sanction foreseen by the plea agreement","
+
+Additional rationale - reason for dichotomy between cell ""H"" and cell ""I""",,,Stav 1,,,,,,,,,,,,,,,,
+"
+Art. 217 of CC BiH, ""Accepting the gift and other forms of benefit""","
+
+Prison","
+
+Subarticle (1) 1 - 10 years",Basic,"
+Dolus directus", Injury, Basic,0.0,Subparagraph (1),,,,Min,Max,,,,,,,,,,,,,,,
+,,,,,,,,,,,,1,10,,,,,,,,,,,,,,,
+,,,Middle," 
+Dolus indirectus ",Endangering,Aggravated,,,,,,VSTV klasifikacija,,,Stepen krivnje,,,,Tezina posljedice,,,,,Oblik izvrsenja,,,,
+,,,,,,,,,,,,Osnovni,Srednji,Visoki,Direktini umisljaj,Indirketni umisljaj,Svjesni nehat,Nesvjesni nehat,Povreda,Ugrozavanje,Izuzetno,Srednje,Nisko,Osnovni,Kvalifikacioni,Sticaj,Produzeno djelo,
+,,"
+
+Subarticle (2) 
+6 months - 5 years in prison",HIGH,Negligence 1, Extreme,Merged criminal offence,0,Subparagraph (2),,,Element,0.5,0.5,0.5,0.5,1.0,0.5,0.5,1.0,1.0,0.5,0.5,0.4,1.0,0.5,1.0,0.1,10.0
+,,,,,,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+,,,,"
+Negligence 2",Middle," 
+Extended criminal offence",,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,, Low,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,Stav 2,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,Min,Max,,,,,,,,,,,,,,,
+,,,,,,,,,,,,0.5,5,,,,,,,,,,,,,,,
+,,,,,,,,,,,,Stepen krivnje,,,Stepen krivnje,,,,Tezina posljedice,,,,,Oblik izvrsenja,,,,
+,,,,,,,,,,,,Osnovni,Srednji,Visoki,Direktini umisljaj,Indirketni umisljaj,Svjesni nehat,Nesvjesni nehat,Povreda,Ugrozavanje,Izuzetno,Srednje,Nisko,Osnovni,Kvalifikacioni,Sticaj,Produzeno djelo,
+,,,,,,,,,,,Element,0.50,0.50,0.50,0.50,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,5.0
+,,,,,,,,,,,FALSE,,,,,,,,,,,,,,,,,
