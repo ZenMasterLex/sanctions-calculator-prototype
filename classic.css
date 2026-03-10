@@ -440,13 +440,17 @@ select:disabled {
     word-break: break-word;
   }
   .ui-classic #result-breakdown-classic {
+    display: block;
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
   }
   .ui-classic .breakdown-table {
-    min-width: 100%;
+    width: max-content;
+    min-width: 560px;
+    margin-bottom: 0;
   }
   .ui-classic .breakdown-table th,
   .ui-classic .breakdown-table td {
@@ -508,4 +512,3 @@ select:disabled {
   color: #fff;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
-

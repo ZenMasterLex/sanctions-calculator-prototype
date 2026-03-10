@@ -471,6 +471,13 @@ select {
 }
 
 @media (max-width: 600px) {
+  .ui-premium .form-item label {
+    display: flex;
+    align-items: flex-end;
+    min-height: 2.6rem;
+    line-height: 1.2;
+  }
+
   .ui-premium .panel {
     padding: 1.5rem;
   }
