@@ -429,6 +429,38 @@ select:disabled {
   .result-years {
     font-size: 3.5rem;
   }
+  .ui-classic .card {
+    padding: 1.5rem;
+  }
+  .ui-classic .result-range,
+  .ui-classic .proof-value,
+  .ui-classic .error-message,
+  .ui-classic .steps-list li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .ui-classic #result-breakdown-classic {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ui-classic .breakdown-table {
+    min-width: 100%;
+  }
+  .ui-classic .breakdown-table th,
+  .ui-classic .breakdown-table td {
+    padding: 0.85rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .ui-classic .proof-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .ui-classic .proof-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Global Theme Toggle (Classic) --- */
@@ -476,5 +508,4 @@ select:disabled {
   color: #fff;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
-
 
